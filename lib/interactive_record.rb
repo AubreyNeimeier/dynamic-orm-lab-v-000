@@ -81,7 +81,7 @@ class InteractiveRecord
   end
 
   def self.find_by(attributes)
-        key, value = attributes.first
+        form_search_word = attributes.values.first
         sql = ("SELECT * FROM #{self.table_name} WHERE #{key} = ?")
         DB[:conn].execute(sql, value)
   end
