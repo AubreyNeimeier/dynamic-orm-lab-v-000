@@ -85,7 +85,7 @@ class InteractiveRecord
         form_search_value = attributes.values.first
 
         sql = ("SELECT * FROM #{self.table_name} WHERE #{form_search_key} = ?")
-        DB[:conn].execute(sql, value)
+        DB[:conn].execute(sql, form_search_value)
   end
 
 
